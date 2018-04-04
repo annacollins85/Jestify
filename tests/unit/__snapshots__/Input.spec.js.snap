@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input.vue matches snapshot 1`] = `
+<div class="form-group">
+    <label>Input label</label>
+    <input type="text" autocomplete="off" class="form-control">
+    <div class="invalid-feedback"></div>
+</div>
+`;

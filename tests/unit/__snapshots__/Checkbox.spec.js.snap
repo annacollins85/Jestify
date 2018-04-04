@@ -1,0 +1,6 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckBox.vue matches snapshot 1`] = `
+<label class="c-checkbox">
+    <input type="checkbox" class="c-checkbox__input c-form__control"> <span class="c-checkbox__indicator"></span> <span class="c-checkbox__label"><h4 class="c-checkbox__name">CheckBox name</h4> <p class="c-checkbox__description">CheckBox description</p></span></label>
+`;
