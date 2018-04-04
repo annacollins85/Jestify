@@ -7,9 +7,14 @@
     "build": "vue-cli-service build",
     "test": "vue-cli-service test",
     "e2e": "vue-cli-service e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0",
+    "sass-mq": "^4.0.2",
+    "sass-rem": "^2.0.1",
     "vue": "^2.5.13",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -26,7 +31,16 @@
     "babel-jest": "^22.0.4",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
-    "vue-template-compiler": "^2.5.13"
+    "vue-template-compiler": "^2.5.13",
+    "@storybook/vue": "^3.4.0",
+    "@storybook/addon-actions": "^3.4.0",
+    "@storybook/addon-links": "^3.4.0",
+    "@storybook/addons": "^3.4.0",
+    "@storybook/addon-centered": "^3.4.0",
+    "@storybook/addon-knobs": "^3.4.0",
+    "@storybook/addon-notes": "^3.4.0",
+    "@storybook/addon-viewport": "^3.4.0",
+    "babel-preset-vue": "^2.0.2"
   },
   "browserslist": [
     "> 1%",
