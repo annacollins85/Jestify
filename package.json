@@ -12,6 +12,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@vue/server-test-utils": "^1.0.0-beta.13",
     "bootstrap": "4.0.0-beta.2",
     "jsdom": "^11.7.0",
     "sass-mq": "^4.0.2",

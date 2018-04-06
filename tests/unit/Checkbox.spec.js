@@ -1,39 +1,41 @@
-import Vue from 'vue'
+// import Vue from 'vue'
+// import jsdom from 'jsdom'
+import { shallow } from '@vue/test-utils'
+
 import Checkbox from '@/components/Checkbox/Checkbox.vue'
 
-import { shallow } from '@vue/test-utils'
-const jsdom = require('jsdom')
-
-const renderer = require('vue-server-renderer').createRenderer()
+// const renderer = require('vue-server-renderer').createRenderer()
 
 describe('Checkbox.vue', () => {
-  it('renders the name when passed', () => {
+  it('renders the name and description when passed', () => {
     const name = 'name of Checkbox'
-    const wrapper = shallow(Checkbox, {
-      propsData: { name }
-    })
-    renderer.renderToString(wrapper, (err, str) => {
-      if (err) console.log('error')
-      const dom = new jsdom.JSDOM(str)
-      console.log(dom.window.document)
-      const name = dom.window.document.querySelector('h4')
-      expect(name.textContent).toContain('name of Checkbox')
-    })
-    // expect(wrapper.text()).toMatch(name)
-  })
-  it('renders the description when passed', () => {
     const description = 'description of Checkbox'
     const wrapper = shallow(Checkbox, {
-      propsData: { description }
+      propsData: { name, description }
     })
-    expect(wrapper.text()).toMatch(description)
+    expect(wrapper.find('h4').text()).toBe('name of Checkbox')
+    expect(wrapper.find('p').text()).toBe('description of Checkbox')
   })
-  // it('should toggle checked status when clicked', () => {
+  // it('renders the name and description when passed2', () => {
+  //   const name = 'name of Checkbox'
+  //   const description = 'description of Checkbox'
+  //   const ClonedBox = Vue.extend(Checkbox)
+  //   const newBox = new ClonedBox({
+  //     propsData: { name, description }
+  //   })
+  //   renderer.renderToString(newBox, (err, str) => {
+  //     if (err) console.log('error')
+  //     const dom = new jsdom.JSDOM(str)
+  //     const name = dom.window.document.querySelector('h4')
+  //     const description = dom.window.document.querySelector('p')
+  //     expect(name.textContent).toBe('name of Checkbox')
+  //     expect(description.textContent).toBe('description of Checkbox')
+  //   })
+  // })
+  // it('has a default setting of unchecked and not disabled', () => {
   //   const wrapper = shallow(Checkbox)
-  //   wrapper.trigger('click')
-  //   expect(wrapper.props().checked).toBe(true)
-  //   wrapper.trigger('click')
-  //   expect(wrapper.props().checked).toBe(true)
+  //   expect(wrapper.find('input').attributes().checked).toBe(false)
+  //   expect(wrapper.find('input').attributes().disabled).toBe(false)
   // })
   // it('matches snapshot', () => {
   //   const name = 'Checkbox name'

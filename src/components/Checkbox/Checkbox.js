@@ -1,9 +1,15 @@
 export default {
   name: 'HelloWorld',
   props: {
-    checked: Boolean,
+    checked: {
+      type: Boolean,
+      default: false
+    },
     description: String,
-    disabled: Boolean,
+    disabled: {
+      type: Boolean,
+      default: false
+    },
     id: String,
     group: String,
     name: String
