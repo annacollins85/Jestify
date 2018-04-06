@@ -5,6 +5,7 @@ export default {
     disabled: Boolean,
     id: String,
     name: String,
-    maxlength: Number
+    maxlength: Number,
+    value: String
   }
 }

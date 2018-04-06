@@ -10,7 +10,8 @@ const knobs = (options = {}) => {
     id: text('id', options.id || 'input'),
     name: text('name', options.name || 'name'),
     disabled: boolean('disabled', options.disabled || false),
-    maxlength: number('maxlength', options.maxlength || 12)
+    maxlength: number('maxlength', options.maxlength || 12),
+    value: text('value', options.value || '')
   }
 }
 

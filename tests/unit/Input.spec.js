@@ -1,6 +1,6 @@
 // import Vue from 'vue'
 // import jsdom from 'jsdom'
-import { shallow } from '@vue/test-utils'
+import { shallow, mount } from '@vue/test-utils'
 // import { renderToString } from '@vue/server-test-utils'
 
 import Input from '@/components/Input/Input.vue'
@@ -17,11 +17,14 @@ describe('Input.vue', () => {
     expect(wrapper.find('label').text()).toBe('Input label')
   })
   it('has a max length when passed', () => {
-    const wrapper = shallow(Input, {
+    const wrapper = mount(Input, {
       propsData: {
-        maxlength: 10
+        maxlength: 10,
+        value: '01234567890'
       }
     })
+    console.info(wrapper.find('input').attributes().value)
+    // expect(wrapper.find('input').attributes().value).toBe('0123456789')
     expect(wrapper.find('input').attributes().maxlength).toBe('10')
   })
   // it('has a max lenth when passed2', () => {
